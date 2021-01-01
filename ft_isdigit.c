@@ -6,17 +6,16 @@
 /*   By: pstrait <pstrait@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/08 15:58:09 by pstrait           #+#    #+#             */
-/*   Updated: 2020/11/08 15:59:42 by pstrait          ###   ########.fr       */
+/*   Updated: 2020/11/20 16:50:26 by pstrait          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-  if (c >= '0' && c<='9')
-    return 1;
-  else
-    return 0;
+	if (c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: pstrait <pstrait@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 21:07:51 by pstrait           #+#    #+#             */
-/*   Updated: 2020/11/09 19:50:53 by pstrait          ###   ########.fr       */
+/*   Updated: 2020/11/20 16:07:32 by pstrait          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	s1 = (unsigned char *)dest;
 	s2 = (unsigned char *)src;
-
 	if (s2 < s1)
 		while (n--)
 			s1[n] = s2[n];

@@ -6,18 +6,18 @@
 /*   By: pstrait <pstrait@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/08 17:12:37 by pstrait           #+#    #+#             */
-/*   Updated: 2020/11/08 17:23:16 by pstrait          ###   ########.fr       */
+/*   Updated: 2020/11/20 13:15:02 by pstrait          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-  if (ft_isalpha(c) && c >= 97)
-  {
-    return c - 32;
-  }
-  else
-    return c;
+	if (ft_isalpha(c) && c >= 97)
+	{
+		return (c - 32);
+	}
+	else
+		return (c);
 }

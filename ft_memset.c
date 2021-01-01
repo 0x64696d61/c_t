@@ -6,23 +6,22 @@
 /*   By: pstrait <pstrait@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 21:07:46 by pstrait           #+#    #+#             */
-/*   Updated: 2020/11/07 21:07:47 by pstrait          ###   ########.fr       */
+/*   Updated: 2020/11/20 16:07:17 by pstrait          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memset(void *dest, int c, size_t len)
+void	*ft_memset(void *dest, int c, size_t len)
 {
-  unsigned char *ptr = dest;
+	unsigned char *ptr;
 
-    while(len > 0)
-    {
-        *ptr = c;
-        ptr++;
-        len--;
-    }
-
-
-    return dest;
+	ptr = dest;
+	while (len > 0)
+	{
+		*ptr = c;
+		ptr++;
+		len--;
+	}
+	return (dest);
 }

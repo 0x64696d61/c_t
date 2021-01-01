@@ -6,37 +6,34 @@
 /*   By: pstrait <pstrait@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 21:07:41 by pstrait           #+#    #+#             */
-/*   Updated: 2020/11/11 19:50:38 by pstrait          ###   ########.fr       */
+/*   Updated: 2020/11/20 19:56:36 by pstrait          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-
-size_t
-	ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
-	size_t	j;
-	size_t	dest_length;
-	size_t	src_length;
+	size_t dst_size;
+	size_t src_size;
+	size_t total_string_size;
+	size_t size;
 
-	src_length = ft_strlen(src);
-	dest_length = ft_strlen(dst);
-	j = dest_length;
-	i = 0;
-	if (dest_length < size - 1 && size > 0)
+	dst_size = ft_strlen(dst);
+	src_size = ft_strlen(src);
+	total_string_size = dstsize;
+	if (!dst || !src)
+		return ((size_t)NULL);
+	if (total_string_size <= dst_size)
+		return (total_string_size + src_size);
+	dst += dst_size;
+	size = total_string_size - dst_size - 1;
+	while (size-- && *src)
 	{
-		while (src[i] && dest_length + i < size - 1)
-		{
-			dst[j] = src[i];
-			j++;
-			i++;
-		}
-		dst[j] = 0;
+		*dst = *src;
+		src++;
+		dst++;
 	}
-	if (dest_length >= size)
-		dest_length = size;
-	return (dest_length + src_length);
+	*dst = '\0';
+	return (dst_size + src_size);
 }

@@ -6,39 +6,26 @@
 /*   By: pstrait <pstrait@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 21:07:05 by pstrait           #+#    #+#             */
-/*   Updated: 2020/11/07 21:07:07 by pstrait          ###   ########.fr       */
+/*   Updated: 2020/11/20 15:12:14 by pstrait          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** locate a substring in a string
-*/
-
 #include "libft.h"
 
-char *ft_strstr(const char *haystack, const char *needle)
+char	*ft_strnstr(const char *s1, const char *s2,
+					size_t len)
 {
-  char *ptr1 = (char *) haystack;
-  char *ptr2 = (char *) needle;
+	size_t	size_s2;
 
-  size_t i = 0;
-  size_t j = 0;
-
-  while (ptr1[i] != '\0') {
-      while(ptr1[i] == ptr2[j])
-      {
-/*
-**         printf("xxx %c\n", ptr2[j]);
-**         printf("j =  %lu\n", j);
-**         printf("strlen =  %lu\n", strlen(ptr2));
-**         if (j == (strlen(ptr2) - 1))
-*/
-          return &ptr1[i-j];
-        j++;
-        i++;
-      }
-      i++;
-      j=0;
-  }
-  return NULL;
+	if (*s2 == '\0')
+		return ((char*)s1);
+	size_s2 = ft_strlen(s2);
+	while (len)
+	{
+		if (ft_strncmp(s1, s2, size_s2) == 0 && len >= size_s2)
+			return ((char*)s1);
+		s1++;
+		len--;
+	}
+	return (NULL);
 }

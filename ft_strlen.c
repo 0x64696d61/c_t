@@ -6,21 +6,21 @@
 /*   By: pstrait <pstrait@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 21:07:30 by pstrait           #+#    #+#             */
-/*   Updated: 2020/11/07 21:07:31 by pstrait          ###   ########.fr       */
+/*   Updated: 2020/11/20 15:20:37 by pstrait          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-  size_t count=0;
+	size_t count;
 
-  while(*s != '\0')
-  {
-    s++;
-    count++;
-  }
-
-  return count;
+	count = 0;
+	while (*s != '\0')
+	{
+		s++;
+		count++;
+	}
+	return (count);
 }

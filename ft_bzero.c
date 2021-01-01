@@ -6,13 +6,13 @@
 /*   By: pstrait <pstrait@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 16:23:58 by pstrait           #+#    #+#             */
-/*   Updated: 2020/11/08 17:43:42 by pstrait          ###   ########.fr       */
+/*   Updated: 2020/11/20 16:56:04 by pstrait          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *dest, size_t len)
+void	ft_bzero(void *dest, size_t len)
 {
-    ft_memset(dest, '\0', len);
+	ft_memset(dest, '\0', len);
 }

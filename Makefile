@@ -6,7 +6,7 @@
 #    By: pstrait <pstrait@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/07 21:08:21 by pstrait           #+#    #+#              #
-#    Updated: 2020/11/07 21:08:23 by pstrait          ###   ########.fr        #
+#    Updated: 2020/11/12 23:38:42 by pstrait          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,9 +15,9 @@ SRCS=*.c
 OBJECTS=*.o
 INCLUDES=./
 # for release
-#COMPILER_FLAGS=-Wall -Wextra -Werror
+COMPILER_FLAGS=-Wall -Wextra -Werror
 # for debugs
-COMPILER_FLAGS=
+#COMPILER_FLAGS=
 
 all: $(NAME)
 

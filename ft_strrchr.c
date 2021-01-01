@@ -6,7 +6,7 @@
 /*   By: pstrait <pstrait@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 21:07:21 by pstrait           #+#    #+#             */
-/*   Updated: 2020/11/08 18:53:20 by pstrait          ###   ########.fr       */
+/*   Updated: 2020/11/20 14:46:40 by pstrait          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 	char	*str;
 
 	str = (char *)s;
-  str = str + ft_strlen(s);
+	str = str + ft_strlen(s);
 	while (*str != c)
 	{
 		if (str == s)

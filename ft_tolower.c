@@ -6,18 +6,18 @@
 /*   By: pstrait <pstrait@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/08 17:19:01 by pstrait           #+#    #+#             */
-/*   Updated: 2020/11/08 17:22:32 by pstrait          ###   ########.fr       */
+/*   Updated: 2020/11/20 13:16:37 by pstrait          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-  if (ft_isalpha(c) && c <= 90 )
-  {
-    return c + 32;
-  }
-  else
-    return c;
+	if (ft_isalpha(c) && c <= 90)
+	{
+		return (c + 32);
+	}
+	else
+		return (c);
 }
